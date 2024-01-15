@@ -6,10 +6,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav max-Width">
         <li class="nav-item" [ngClass]="{'active' : !userStoreService.isLogged && (state===1 || state===3)}" *ngIf="!userStoreService.isLogged">
-          <a [routerLink]="'login'" class="nav-link" (click)="goTo(1)" href="#">Login<span class="sr-only">(current)</span></a>
+          <a [routerLink]="'user/login'" class="nav-link" (click)="goTo(1)" href="#">Login<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item" [ngClass]="{'active' : state===2}" *ngIf="!userStoreService.isLogged">
-          <a [routerLink]="'register'" class="nav-link" (click)="goTo(2)" href="#">Register</a>
+          <a [routerLink]="'user/register'" class="nav-link" (click)="goTo(2)" href="#">Register</a>
         </li>
         <!-- <li class="nav-item" [ngClass]="{'active' : state===1}">
           <a class="nav-link" (click)="goTo(1)" href="#">Inici </a>

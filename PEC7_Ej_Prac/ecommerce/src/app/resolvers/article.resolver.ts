@@ -3,7 +3,7 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/rou
 import {Observable} from 'rxjs';
 import {ArticleServiceService} from "./../services/article-service.service";
 import {map} from "rxjs/operators";
-import { Article } from '../article-item/model/article';
+import { Article } from '../models/article/article';
 
 @Injectable({
   providedIn: 'root'

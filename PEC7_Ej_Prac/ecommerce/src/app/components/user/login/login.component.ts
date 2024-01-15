@@ -1,10 +1,10 @@
 import { Component, OnDestroy } from '@angular/core';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../../services/user.service';
 
 import {FormBuilder, Validators} from "@angular/forms";
-import {User} from "./../../models/user";
+import {User} from "../../../models/user/user";
 import {Subscription} from "rxjs";
-import {UserStoreService} from "./../../services/user-store.service";
+import {UserStoreService} from "../../../services/user-store.service";
 import { Router } from '@angular/router';
 
 @Component({

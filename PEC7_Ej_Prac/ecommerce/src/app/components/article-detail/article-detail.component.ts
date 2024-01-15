@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
-import {Article} from "./../article-item/model/article";
+import {Article} from "../../models/article/article";
 
 @Component({
   selector: 'app-article-detail',
