@@ -10,7 +10,7 @@ import { ArticleNewTemplateComponent } from './article-new-template/article-new-
 import { ArticleNewReactiveComponent } from './article-new-reactive/article-new-reactive.component';
 
 //Importem el servei
-import { ArticleServiceService } from './article-service.service';
+import { ArticleServiceService } from './services/article-service.service';
 
 //HTTPCLIENTMODULE
 import { HttpClientModule } from '@angular/common/http';
@@ -18,6 +18,10 @@ import { ArticleListComponent } from './article-list/article-list.component';
 
 //Pipe imagen por defecto
 import { DefaultImagePipe } from './pipes/default-image.pipe';
+
+//Login y register
+import { RegisterComponent } from './user/register/register.component';
+import { LoginComponent } from './user/login/login.component';
 
 
 @NgModule({
@@ -28,7 +32,9 @@ import { DefaultImagePipe } from './pipes/default-image.pipe';
     ArticleNewTemplateComponent,
     ArticleNewReactiveComponent,
     ArticleListComponent,
-    DefaultImagePipe
+    DefaultImagePipe,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output  } from '@angular/core';
+import {UserStoreService} from "./../services/user-store.service";
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +8,11 @@ import { Component, EventEmitter, Output  } from '@angular/core';
 })
 export class NavbarComponent {
   @Output() public opcionMenu = new EventEmitter();
+
+  constructor(
+    public userStoreService: UserStoreService,
+   ) {
+  }
 
   public state:number = 1;
 
@@ -17,5 +23,9 @@ export class NavbarComponent {
 
   useActive(active: number) {
     this.state = active;
+  }
+
+  logout(): void {
+    this.userStoreService.deleteToken();
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticleServiceService } from './../article-service.service';
+import { ArticleServiceService } from '../services/article-service.service';
 import { Article } from "./../article-item/model/article";
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';

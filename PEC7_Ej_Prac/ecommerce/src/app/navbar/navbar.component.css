@@ -2,3 +2,19 @@
     font-weight: bold;
     color:red;
 }
+
+.max-Width{
+    width: 100%;
+}
+
+.logout-button{
+    color: red !important;
+
+    padding: 10px;
+    border: 1px solid red;
+}
+
+.logout-button:hover{
+    background-color: #212529;
+    font-weight: bold;
+}

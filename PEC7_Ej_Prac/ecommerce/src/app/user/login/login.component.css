@@ -29,3 +29,15 @@
 .h1-form-content{
     padding:30px;
 }
+
+.divInfoLogin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.logoutBtn{
+    width: 50%;
+}

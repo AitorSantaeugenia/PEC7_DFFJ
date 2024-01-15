@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy, ChangeDetectorRef  } from '@angular/core';
 import { Article } from './model/article';
 import { ArticleQuantityChange } from './model/article-quantity-change';
-import { ArticleServiceService } from './../article-service.service';
+import { ArticleServiceService } from '../services/article-service.service';
 
 @Component({
   selector: 'article-item',

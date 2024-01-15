@@ -1,12 +1,14 @@
-<h1 class="title">PEC6 - Exercici 2-5</h1>
-<div class="container-search">
-    <div>
-        <label class="mr-4">Busca el artículo desdeado: 
-        </label>
-        <input type="text" [(ngModel)]="searchQuery" placeholder="Buscar por nombre" (input)="onSearchQueryChange()"/>
-    </div>
-    <div>
-        <article-item *ngFor="let article of filteredArticles" [article]="article">
-        </article-item>
+<div class="form-content">
+    <h1 class="h1-form-content">Article - Article-list</h1>
+    <div class="container-search">
+        <div>
+            <label class="mr-4">Busca el artículo desdeado: 
+            </label>
+            <input type="text" [(ngModel)]="searchQuery" placeholder="Buscar por nombre" (input)="onSearchQueryChange()"/>
+        </div>
+        <div>
+            <article-item *ngFor="let article of filteredArticles" [article]="article">
+            </article-item>
+        </div>
     </div>
 </div>
