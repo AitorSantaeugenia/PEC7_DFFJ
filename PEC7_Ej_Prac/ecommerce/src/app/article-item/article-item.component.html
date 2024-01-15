@@ -1,0 +1,20 @@
+<div class="article-item" [ngClass]="{'onSale': article.isOnSale == true, 'notOnSale': article.isOnSale == false}">
+    <div class="article-item-out-of-stock" [ngClass]="{'displayTrue': article.isOnSale == false, 'displayFalse': article.isOnSale == true}">
+        <h2>Out of stock</h2>
+    </div>
+    <div class="article-item-image">
+        <img [src]="article.imageUrl | defaultImage" alt="{{article.name}}" />
+    </div>
+    <div class="article-item-info">
+        <figcaption>
+            <h2>{{article.name}}</h2>
+            <p [ngClass]="{'OnSaleText': article.isOnSale == true, 'NotOnSaleText': article.isOnSale == false}">{{article.price | currency:'EUR':'symbol':'1.2-2' }}</p>
+            <p *ngIf="article.isOnSale == false" [ngClass]="{'NotOnSaleText': article.isOnSale == false}">En stock 0 unitats</p>
+            <div class="article-item-info-counter" *ngIf="article.isOnSale == true">
+                <button class="increment" (click)="incrementInCart()">+</button>      
+                <span class="qty">{{article.quantityInCart}}</span>
+                <button class="decrement" *ngIf="article.quantityInCart > 0" (click)="decrementInCart()">-</button>
+            </div>
+        </figcaption>
+    </div>
+</div>
