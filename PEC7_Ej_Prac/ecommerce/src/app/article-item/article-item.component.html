@@ -1,4 +1,4 @@
-<div class="article-item" [ngClass]="{'onSale': article.isOnSale == true, 'notOnSale': article.isOnSale == false}">
+<div class="article-item pointer" [ngClass]="{'onSale': article.isOnSale == true, 'notOnSale': article.isOnSale == false}" (click)="navigateToArticleDetail(article.id)">
     <div class="article-item-out-of-stock" [ngClass]="{'displayTrue': article.isOnSale == false, 'displayFalse': article.isOnSale == true}">
         <h2>Out of stock</h2>
     </div>

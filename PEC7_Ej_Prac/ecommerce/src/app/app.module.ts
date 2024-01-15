@@ -34,7 +34,7 @@ import { LoginComponent } from './user/login/login.component';
     ArticleListComponent,
     DefaultImagePipe,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

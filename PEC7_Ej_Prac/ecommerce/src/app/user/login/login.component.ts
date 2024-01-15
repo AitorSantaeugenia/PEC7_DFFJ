@@ -5,6 +5,7 @@ import {FormBuilder, Validators} from "@angular/forms";
 import {User} from "./../../models/user";
 import {Subscription} from "rxjs";
 import {UserStoreService} from "./../../services/user-store.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +23,8 @@ export class LoginComponent implements OnDestroy{
   constructor(
     public userStoreService: UserStoreService,
     private userService: UserService,
-    private fb: FormBuilder) {
+    private fb: FormBuilder,
+    private router: Router) {
   }
 
   ngOnDestroy(): void {
@@ -35,6 +37,7 @@ export class LoginComponent implements OnDestroy{
         this.userStoreService.saveToken(token);
       }
     })
+    this.router.navigate(['/article/list']);
   }
 
   logout(): void {

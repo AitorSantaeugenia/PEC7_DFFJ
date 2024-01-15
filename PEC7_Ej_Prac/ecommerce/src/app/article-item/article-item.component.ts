@@ -3,6 +3,8 @@ import { Article } from './model/article';
 import { ArticleQuantityChange } from './model/article-quantity-change';
 import { ArticleServiceService } from '../services/article-service.service';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'article-item',
   templateUrl: './article-item.component.html',
@@ -13,7 +15,7 @@ export class ArticleItemComponent {
   @Input() public article!: Article;
   @Output() private quantityChange: EventEmitter<ArticleQuantityChange> = new EventEmitter();
 
-  constructor(private articleService: ArticleServiceService, private cdRef: ChangeDetectorRef) {}
+  constructor(private articleService: ArticleServiceService, private cdRef: ChangeDetectorRef, private router: Router) {}
 
   incrementInCart() {
     this.quantityChange.emit({ article: this.article, changeInQuantity: 1 });
@@ -55,5 +57,9 @@ export class ArticleItemComponent {
         );
       }
     }
+  }
+
+  navigateToArticleDetail(articleId: number): void {
+    this.router.navigate(['/article', articleId]);
   }
 }

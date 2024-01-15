@@ -1,1 +1,21 @@
-<p>article-detail works!</p>
+<div class="article-item">
+    <div class="article-item-out-of-stock" >
+        <h1 class="h1-form-content">Article - /article/:id</h1>
+    </div>
+    <div class="article-item-image">
+        <h1 class="h1-form-content">{{article.name}}</h1>
+        <img [src]="article.imageUrl" alt="{{article.name}}" />
+    </div>
+    <div class="article-item-info">
+        <figcaption>
+            <p class="precioArticleDetail">{{article.price}} €</p>
+            <span class="qty">{{article.quantityInCart}} unidades en stock</span>
+            <p *ngIf="article.isOnSale == true" >En stock 0 unitats</p>
+            <div class="article-item-info-counter" *ngIf="article.isOnSale == true">
+                <button class="increment">+</button>      
+                
+                <button class="decrement" *ngIf="article.quantityInCart > 0">-</button>
+            </div>
+        </figcaption>
+    </div>
+</div>

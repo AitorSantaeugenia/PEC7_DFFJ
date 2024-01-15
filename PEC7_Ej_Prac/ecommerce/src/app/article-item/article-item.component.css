@@ -11,6 +11,18 @@
     text-align: center;
     padding:20px 0 20px 0;
     border-bottom:1px solid black;
+
+    &.onSale:hover {
+        background-color: rgba(126, 190, 126, 0.745);
+      }
+    
+      &.notOnSale:hover {
+        background-color:  rgba(220, 145, 145, 0.505);
+      }
+}
+
+.pointer{
+    cursor:pointer;
 }
 
 .article-item-info p{
